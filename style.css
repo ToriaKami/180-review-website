@@ -1,0 +1,71 @@
+/* --- Global Styles & Color Palette --- */
+
+/*
+  The :root selector targets the highest-level element in the HTML document.
+  We use it to declare global CSS variables for our color palette,
+  making it easy to manage colors across the entire site.
+*/
+:root {
+  --primary-color: #00a99d; /* Teal for headings and key elements */
+  --dark-text-color: #3d4849; /* Charcoal for body text */
+  --light-background: #f4f6f7; /* Light Gray for page background */
+  --secondary-text-color: #a1aab4; /* Medium Gray for subtitles or less important text */
+  --accent-color: #bf08ff; /* Vibrant purple for call-to-action buttons or highlights */
+  --footer-background: #3d4849; /* Using the dark charcoal for the footer */
+  --footer-text-color: #f4f6f7; /* Using the light gray for footer text */
+}
+
+/* 
+  Basic reset for consistent styling across browsers.
+  box-sizing: border-box makes layout math more intuitive.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base Body & Typography Styles --- */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--light-background); /* Using light gray for the background */
+  color: var(--dark-text-color); /* Using charcoal for default text */
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* --- Header, Main, Footer Layout --- */
+
+header, footer {
+  padding: 1rem 2rem; /* Adds some spacing inside the header and footer */
+}
+
+footer {
+  background-color: var(--footer-background); /* Dark charcoal background */
+  color: var(--footer-text-color); /* Light text for contrast */
+  text-align: center;
+  margin-top: 4rem; /* Pushes the footer down from the main content */
+}
+
+/* --- Hero Section Styles --- */
+
+.hero {
+  text-align: center; /* Centers the text inside the hero section */
+  padding: 6rem 1rem; /* Generous padding to make it feel spacious (6rem top/bottom, 1rem left/right) */
+  background-color: #ffffff; /* A clean white background to make the hero stand out */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Makes the main headline large and impactful */
+  color: var(--primary-color); /* Uses the primary Teal color */
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px; /* Prevents the line from becoming too wide on large screens */
+  margin: 0 auto; /* Centers the paragraph container */
+  color: var(--dark-text-color);
+}
