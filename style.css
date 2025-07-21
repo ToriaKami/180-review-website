@@ -1,18 +1,17 @@
-/* --- Global Styles & Color Palette --- */
+/* --- Global Styles & Updated Color Palette --- */
 
 /*
   The :root selector targets the highest-level element in the HTML document.
-  We use it to declare global CSS variables for our color palette,
-  making it easy to manage colors across the entire site.
+  We are updating the color values here to reflect the new brand identity.
 */
 :root {
-  --primary-color: #00a99d; /* Teal for headings and key elements */
-  --dark-text-color: #3d4849; /* Charcoal for body text */
-  --light-background: #f4f6f7; /* Light Gray for page background */
-  --secondary-text-color: #a1aab4; /* Medium Gray for subtitles or less important text */
-  --accent-color: #bf08ff; /* Vibrant purple for call-to-action buttons or highlights */
-  --footer-background: #3d4849; /* Using the dark charcoal for the footer */
-  --footer-text-color: #f4f6f7; /* Using the light gray for footer text */
+  --primary-color: #2a6fdb; /* A professional blue for headings and key links */
+  --dark-text-color: #2a2a2a; /* Dark charcoal for body text */
+  --light-background: #f9fbf6; /* Very light, slightly green off-white for page background */
+  --secondary-text-color: #888888; /* Medium Gray for subtitles or less important text */
+  --accent-color: #b9ff66; /* Vibrant lime green for all primary buttons */
+  --footer-background: #2a2a2a; /* Using the dark charcoal for the footer */
+  --footer-text-color: #f9fbf6; /* Using the light off-white for footer text */
 }
 
 /* 
