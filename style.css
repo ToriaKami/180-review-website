@@ -282,3 +282,110 @@ header {
     margin: 1rem 0; /* Add vertical spacing between links */
   }
 }
+
+/* --- About Page Styles --- */
+
+/*
+  This container formats the main content area of the about page.
+  We give it a max-width to prevent text lines from being too long
+  on wide screens, making them easier to read.
+*/
+.about-content {
+  max-width: 900px; /* Sets the widest the content can be */
+  margin: 4rem auto; /* Adds space top/bottom and centers the container */
+  padding: 2rem;
+  background-color: #ffffff; /* Gives it a clean, white card look */
+  border-radius: 8px; /* Softly rounds the corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Adds a subtle shadow for depth */
+}
+
+/*
+  This styles the circular placeholder for the profile image.
+*/
+.profile-image-placeholder {
+  width: 250px;
+  height: 250px;
+  background-color: var(--secondary-text-color); /* Placeholder gray color */
+  border-radius: 50%; /* This is what makes it a circle */
+  
+  /* This is the key for the two-column layout on desktops */
+  float: left; 
+  
+  /* Adds spacing between the image and the text that wraps around it */
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  shape-outside: circle(50%); /* Helps text wrap more nicely around the circle */
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    color: var(--dark-text-color);
+}
+
+.about-content p {
+    margin-bottom: 1rem; /* Adds spacing between paragraphs */
+}
+
+/*
+  This styles the horizontal line to create a clean visual separation.
+*/
+.about-content hr {
+  /* This forces the line to appear *after* the floated image, not beside it */
+  clear: both;
+  
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0; /* A light line color */
+  margin: 2rem 0; /* Space above and below the line */
+}
+
+/*
+  Styles all links within the about content area for a consistent look.
+*/
+.about-content a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+.about-content a:hover {
+  text-decoration: underline; /* Adds an underline only when hovered */
+}
+
+
+/* --- Responsive Styles for Mobile --- */
+
+/*
+  This media query applies styles ONLY to screens 768px wide or smaller.
+*/
+@media (max-width: 768px) {
+  .about-content {
+    /* Reduce padding and margin on smaller screens to maximize space */
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  /*
+    On mobile, we stack the image on top of the text.
+  */
+  .profile-image-placeholder {
+    /* This removes the two-column layout */
+    float: none;
+    
+    /* Center the image horizontally */
+    margin: 0 auto 2rem;
+  }
+  
+  .about-content h1 {
+    font-size: 2rem; /* Makes the title a bit smaller on mobile */
+  }
+}
