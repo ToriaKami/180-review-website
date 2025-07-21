@@ -503,3 +503,91 @@ header {
   font-size: 1.15rem;
   margin-bottom: 2rem;
 }
+
+/* --- Services Section Styles --- */
+
+/* Task 1: Section Foundation */
+.services-section {
+    background-color: var(--dark-text-color); /* Dark background */
+    color: var(--light-background); /* Light text for contrast */
+    padding: 5rem 1rem; /* Generous vertical and horizontal padding */
+    text-align: center;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 3rem;
+}
+
+/* Task 1: Grid Layout */
+.services-grid {
+    display: grid;
+    /* Create 3 equal-width columns on desktop */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; /* Spacing between cards */
+}
+
+/* Task 3: Card Styling */
+.service-card {
+    background-color: #ffffff; /* Stand-out white background */
+    color: var(--dark-text-color); /* Dark text inside cards */
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Task 5: Smooth Hover Transition */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* Task 4: SVG Icon Styling */
+.service-card svg {
+    width: 60px;
+    height: 60px;
+    stroke: var(--primary-color); /* Use a brand color for the icon stroke */
+}
+
+/* Task 5: Interactive Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px); /* Lifts the card up slightly */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+}
+
+
+/* Task 6: Mobile Responsiveness */
+
+/* Tablet view: 2 columns */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile view: 1 column */
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-section h2 {
+        font-size: 2rem;
+    }
+}
